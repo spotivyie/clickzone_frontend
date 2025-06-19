@@ -6,15 +6,15 @@
 
 ## 🚀 Tecnologias Utilizadas
 
-**React**
-**Vite**
-**React Router DOM v7** 
-**Tailwind CSS 4** 
-**Stripe JS + React Stripe** 
-**Axios** 
-**Recharts** 
-**Swiper** 
-**Lucide-react** 
+- React
+- Vite
+- React Router DOM v7 
+- Tailwind CSS 4 
+- Stripe JS + React Stripe 
+- Axios 
+- Recharts 
+- Swiper 
+- Lucide-react 
 
 ---
 

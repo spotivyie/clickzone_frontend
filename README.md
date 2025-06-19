@@ -1,4 +1,4 @@
-# 🛒 ClickZone
+# 🛒 ClickZone Ecommerce - Frontend
 
 **ClickZone** é uma aplicação web de e-commerce desenvolvida com React e Vite, focada em oferecer uma experiência rápida, moderna e responsiva. O projeto possui integração com Stripe para pagamentos, visualização de produtos, e recursos administrativos como dashboards com gráficos.
 

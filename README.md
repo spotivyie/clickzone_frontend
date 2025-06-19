@@ -49,7 +49,7 @@ A ClickZone está integrada com o Stripe, permitindo pagamentos via:
 
 ## 🧑‍💻 Desenvolvido por
 
-Eduarda Cardoso Brandão
-Projeto acadêmico/pessoal com foco em práticas modernas de frontend e e-commerce.
+- Eduarda Cardoso Brandão
+- Projeto acadêmico/pessoal com foco em práticas modernas de frontend e e-commerce.
 
 ---

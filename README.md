@@ -1,12 +1,55 @@
-# React + Vite
+# 🛒 ClickZone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ClickZone** é uma aplicação web de e-commerce desenvolvida com React e Vite, focada em oferecer uma experiência rápida, moderna e responsiva. O projeto possui integração com Stripe para pagamentos, visualização de produtos, e recursos administrativos como dashboards com gráficos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+**React**
+**Vite**
+**React Router DOM v7** 
+**Tailwind CSS 4** 
+**Stripe JS + React Stripe** 
+**Axios** 
+**Recharts** 
+**Swiper** 
+**Lucide-react** 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Scripts Disponíveis
+
+| Comando         | Descrição                                   |
+|------------------|----------------------------------------------|
+| `npm run dev`    | Inicia o servidor de desenvolvimento          |
+| `npm run build`  | Compila a aplicação para produção             |
+| `npm run preview`| Visualiza a build em ambiente local           |
+| `npm run lint`   | Verifica erros e padrões no código com ESLint |
+
+---
+
+## 💳 Integração com Stripe
+
+A ClickZone está integrada com o Stripe, permitindo pagamentos via:
+- Cartão de crédito
+- Pix (via Stripe)
+
+---
+
+## 📈 Recursos Futuramente Inclusos
+
+- Autenticação e autorização de usuários
+- Painel administrativo completo
+- Avaliações de produtos
+- Histórico de pedidos
+- Filtros avançados por categoria/preço
+
+---
+
+## 🧑‍💻 Desenvolvido por
+
+Eduarda Cardoso Brandão
+Projeto acadêmico/pessoal com foco em práticas modernas de frontend e e-commerce.
+
+---

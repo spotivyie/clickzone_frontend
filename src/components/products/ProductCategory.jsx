@@ -13,7 +13,7 @@ function ProductCategory() {
     useEffect(() => {
         if (!category) return;
 
-        axios.get(`http://localhost:5000/api/products?category=${category}`)
+        axios.get(`${import.meta.env.VITE_API_URL}/api/products?category=${category}`)
             .then(res => setProducts(res.data.products))
             .catch(err => console.error(err))
             .finally(() => setLoading(false));

@@ -10,7 +10,7 @@ function useReviewActions(reviews, setReviews, userId, token) {
         if (!token) return alert("Você precisa estar logado para deletar um comentário.");
 
         try {
-        await axios.delete(`http://localhost:5000/api/reviews/${id}`, {
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/reviews/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
         });
         setReviews(reviews.filter((r) => r._id !== id));
@@ -30,7 +30,7 @@ function useReviewActions(reviews, setReviews, userId, token) {
 
         try {
         const res = await axios.put(
-            `http://localhost:5000/api/reviews/${id}`,
+            `${import.meta.env.VITE_API_URL}/api/reviews/${id}`,
             { comment: newComment, rating: newRating },
             { headers: { Authorization: `Bearer ${token}` } }
         );

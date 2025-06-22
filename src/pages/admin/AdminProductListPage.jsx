@@ -12,7 +12,7 @@ const AdminProductListPage = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/api/products?page=${page}&limit=${productsPerPage}&sort=newest`)
+            .get(`${import.meta.env.VITE_API_URL}/api/products?page=${page}&limit=${productsPerPage}&sort=newest`)
             .then((res) => {
                 console.log("Produtos carregados do backend:", res.data.products);
                 setProducts(res.data.products);

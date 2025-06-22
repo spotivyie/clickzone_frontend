@@ -12,7 +12,7 @@ function ReviewEditCard({ review, token, onUpdated, onCancel }) {
         setMessage('');
         try {
         await axios.put(
-            `http://localhost:5000/api/reviews/${review._id}`,
+            `${import.meta.env.VITE_API_URL}/api/reviews/${review._id}`,
             { rating, comment },
             { headers: { Authorization: `Bearer ${token}` } }
         );

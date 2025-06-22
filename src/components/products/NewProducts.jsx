@@ -8,7 +8,7 @@ function NewProducts() {
 
     useEffect(() => {
         axios
-        .get('http://localhost:5000/api/products?sort=newest&limit=4')
+        .get(`${import.meta.env.VITE_API_URL}/api/products?sort=newest&limit=4`)
         .then((res) => setProducts(res.data.products))
         .catch((err) => console.error(err))
         .finally(() => setLoading(false));

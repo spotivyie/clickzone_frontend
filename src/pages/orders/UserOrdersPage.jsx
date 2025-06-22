@@ -8,16 +8,16 @@ const UserOrdersPage = () => {
     useEffect(() => {
         const fetchOrders = async () => {
         try {
-            const token = localStorage.getItem('token'); // ou da forma como armazena a auth
-            const response = await axios.get('http://localhost:5000/api/orders', {
-            headers: {
-                Authorization: `Bearer ${token}`
+                const token = localStorage.getItem('token'); 
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/orders`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+                });
+                setOrders(response.data);
+            } catch (error) {
+                console.error('Erro ao buscar pedidos:', error);
             }
-            });
-            setOrders(response.data);
-        } catch (error) {
-            console.error('Erro ao buscar pedidos:', error);
-        }
         };
 
         fetchOrders();

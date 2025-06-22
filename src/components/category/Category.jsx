@@ -10,7 +10,7 @@ function Category() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/products/")
+            .get(`${import.meta.env.VITE_API_URL}/api/products/`)
             .then((res) => {
                 const products = res.data.products;
                 console.log(products.map(p => p.category));

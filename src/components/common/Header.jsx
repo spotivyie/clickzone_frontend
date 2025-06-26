@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 //icons
 import { User, Menu, X } from "lucide-react"; 
 //components
@@ -20,10 +20,15 @@ function HeaderPage() {
     const showCategory = useScrollShowCategory();
 
     const [open, setOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const dropdownRef = useRef(null);
+
     useDropdownToggle(open, setOpen, dropdownRef);
 
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    useEffect(() => {
+        setOpen(false);
+        setMobileMenuOpen(false);
+    }, [location.pathname]);
 
     const handleLogout = () => {
         localStorage.removeItem("token");
@@ -32,8 +37,8 @@ function HeaderPage() {
         navigate("/login");
     };
 
-    // Mostrar categorias apenas na página inicial
     const showCategoria = location.pathname === "/";
+
 
     return (
         <header className="bg-gray-800 shadow p-4 items-center h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 fixed top-0 left-0 right-0 z-50">

@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import useOrderDetails from "../../hooks/useOrderDetails";
-import { useEffect } from "react";
 import { CreditCard } from "lucide-react";
 
 const OrderConfirmationPage = () => {
@@ -9,10 +8,6 @@ const OrderConfirmationPage = () => {
     const { clearCart } = useCart();
     const navigate = useNavigate();
     const { order, loading } = useOrderDetails(orderId, clearCart);
-
-    useEffect(() => {
-        clearCart();
-    }, [clearCart]);
 
     if (loading) return <p className="p-4">Carregando pedido...</p>;
     if (!order) return <p className="p-4 text-red-500">Pedido não encontrado.</p>;

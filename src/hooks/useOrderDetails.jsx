@@ -14,7 +14,7 @@ function useOrderDetails(orderId, onSuccess) {
             });
             setOrder(res.data);
 
-            if (onSuccess) onSuccess(res.data); // ex: limpar carrinho
+            if (onSuccess) onSuccess(res.data); 
         } catch (err) {
             console.error("Erro ao buscar pedido:", err);
         } finally {

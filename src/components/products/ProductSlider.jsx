@@ -18,8 +18,8 @@ function ProductSlider() {
         .finally(() => setLoading(false));
     }, []);
 
-    if (loading) return <p>Carregando produtos...</p>;
-    if (products.length === 0) return <p>Nenhum produto encontrado.</p>;
+    if (loading) return <p className="max-w-6xl mx-auto">Carregando produtos...</p>;
+    if (products.length === 0) return <p className="max-w-6xl mx-auto">Nenhum produto encontrado.</p>;
 
     return (
         <div className="relative">
@@ -37,7 +37,7 @@ function ProductSlider() {
                 }}
             >
                 {products.map((prod) => (
-                    <SwiperSlide key={prod._id}>
+                    <SwiperSlide key={prod._id} className="!w-[300px]">
                         <ProductCard product={prod} />
                     </SwiperSlide>
                 ))}
